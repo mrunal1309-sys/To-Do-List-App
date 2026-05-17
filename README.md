@@ -25,7 +25,9 @@ This project helps users manage daily tasks efficiently with a clean and user-fr
 ---
 
 ## 📸 Screenshots
-<img width="395" height="811" alt="Screenshot 2026-05-17 132929" src="https://github.com/user-attachments/assets/f409a638-f3e2-4286-9732-0e3722b611d4" />
+<img width="395" height="611" alt="Screenshot 2026-05-17 132929" src="https://github.com/user-attachments/assets/f409a638-f3e2-4286-9732-0e3722b611d4" />
+<img width="1905" height="615" alt="Screenshot 2026-05-17 132858" src="https://github.com/user-attachments/assets/e75350ab-bf14-4fb8-9b09-a64d954b1a56" />
+
 
 
 
