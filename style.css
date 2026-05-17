@@ -1,0 +1,367 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+    overflow: hidden;
+}
+
+/* Main Container */
+.container{
+    width: 420px;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.3);
+
+    animation: fadeIn 1s ease;
+}
+
+/* Title */
+.container h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+
+    font-size: 32px;
+    letter-spacing: 1px;
+
+    animation: slideDown 0.8s ease;
+}
+
+/* Input Section */
+.input-section{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input Box */
+#todoInput{
+    flex: 1;
+    padding: 14px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    transition: 0.3s;
+}
+
+/* Placeholder */
+#todoInput::placeholder{
+    color: rgba(255,255,255,0.7);
+}
+
+/* Input Focus Animation */
+#todoInput:focus{
+    transform: scale(1.02);
+
+    background: rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Add Button */
+#addBtn{
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: #00c6ff;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+#addBtn:hover{
+    background: #0072ff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(0,114,255,0.4);
+}
+
+/* Click Animation */
+#addBtn:active{
+    transform: scale(0.95);
+}
+
+/* Todo List */
+#todoList{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Todo Item */
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.12);
+
+    color: white;
+
+    animation: popUp 0.4s ease;
+    
+    transition: 0.3s;
+}
+
+/* Hover Effect on Todo */
+.todo-item:hover{
+    transform: translateX(5px);
+
+    background: rgba(255,255,255,0.18);
+}
+
+/* Task Text */
+.task-text{
+    font-size: 16px;
+    word-break: break-word;
+}
+
+/* Buttons Container */
+.buttons{
+    display: flex;
+    gap: 8px;
+}
+
+/* Edit Button */
+.edit-btn{
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #fbc531;
+    color: black;
+
+    transition: 0.3s;
+}
+
+/* Delete Button */
+.delete-btn{
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #ff4d4d;
+    color: white;
+
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.edit-btn:hover,
+.delete-btn:hover{
+    transform: scale(1.08);
+}
+
+/* Scrollbar */
+.todo-container{
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar */
+.todo-container::-webkit-scrollbar{
+    width: 6px;
+}
+
+.todo-container::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+/* Fade In */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide Down */
+@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Todo Popup */
+@keyframes popUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width: 500px){
+
+    .container{
+        width: 90%;
+    }
+
+    .input-section{
+        flex-direction: column;
+    }
+
+    #addBtn{
+        width: 100%;
+    }
+}
+
+/* Logo */
+.logo{
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 2px solid rgba(255,255,255,0.2);
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.15);
+
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes floatLogo{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media(max-width: 500px){
+
+    .container{
+        width: 92%;
+        padding: 18px;
+    }
+
+    .input-section{
+        flex-direction: column;
+    }
+
+    #addBtn{
+        width: 100%;
+    }
+
+    .todo-item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttons{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .container h1{
+        font-size: 26px;
+    }
+
+    .logo{
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+}
